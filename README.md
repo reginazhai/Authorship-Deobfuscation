@@ -11,5 +11,14 @@ This repository contains code and data used in anonymous ACL submission 2022.
 
 ## Usage
 
-### Evaluating prediction accuracy for obfuscated texts
+### Evaluate prediction accuracy for obfuscated texts
 To evaluate directly using previous data, run the following in the main folder.
+```
+  python3 eval.py
+```
+
+### Evaluate performance on METEOR score
+To evaluate the METEOR score from previous data, run the following in the main folder.
+```
+  python3 CalcMeteor.py
+```
