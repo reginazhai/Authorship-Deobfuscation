@@ -134,7 +134,7 @@ def main():
 
     clf = Classifier(classifierType, authorstoKeep, datasetName, indexNumber)
     clf.loadClassifier()
-    testInstancesFilename = "../../Data/datasetPickles/" + str(datasetName) + '-' + str(authorstoKeep) + '/X_test.pickle'
+    testInstancesFilename = "Data/X_test/X_train.pickle'
     with open(testInstancesFilename, 'rb') as f:
         testInstances = pickle.load(f)
     while (documentNumber != len(testInstances)):

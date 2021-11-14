@@ -64,11 +64,11 @@ def encode_text(tokenizer, lines, length):
 
 def getData(datasetName, authorsRequired):
     
-    picklesPath = '../../Data/datasetPickles/' + datasetName + "-" + str(authorsRequired) + "/"
-    with open(picklesPath+'X_train.pickle', 'rb') as handle:
+    picklesPath = 'Data/'
+    with open(picklesPath+'X_train/X_train.pickle', 'rb') as handle:
         X_train = pickle.load(handle)
 
-    with open(picklesPath+'X_test.pickle', 'rb') as handle:
+    with open(picklesPath+'X_test/X_test.pickle', 'rb') as handle:
         X_test = pickle.load(handle)
     
     
@@ -105,7 +105,7 @@ class Classifier:
     def loadClassifier(self):
 
         if self.classifierType == 'ml':
-            classifierName = "../../AuthorshipAttributionSystems/RFCWriteprintsStatic/trainedModels/" + str(self.datasetName) + '-' + str(self.authorstoKeep) + '/trained_model_mutantxwp+dspan600.sav'
+            classifierName = "trainedModels/" + str(self.datasetName) + '-' + str(self.authorstoKeep) + '/trained_model_mutantxwp+dspan600.sav'
             # Original Model
             #classifierName = "/home/rzhai/Desktop/trained_model_obf.sav"
             #classifierName = "../../AuthorshipAttributionSystems/RFCWriteprintsStatic/trainedModels/" + str(self.datasetName) + '-' + str(self.authorstoKeep) + '/trained_model_dspan.sav'

@@ -55,19 +55,15 @@ def getInformationOfInputDocument(documentPath):
 
     return (authorLabel, authorName, inputText)
 
-testInstancesFilename = "../../Data/BlogsAllObf/BlogX_test.pickle"
+testInstancesFilename = "Data/X_test/BlogX_test.pickle"
 with open(testInstancesFilename, 'rb') as f:
         testInstances = pickle.load(f)
 
-testInstancesFilename = "../../Data/BlogsAllObf/X_test/X_test_obf_dspan300.pickle"
+testInstancesFilename = "Data/X_test/X_test_obf_dspan300.pickle"
 with open(testInstancesFilename, 'rb') as f:
         testInstances1 = pickle.load(f)
 
-#testInstancesFilename = "../../Data/BlogsAllObf/X_test/X_test_obf_snpan300.pickle"
-#with open(testInstancesFilename, 'rb') as f:
-#        testInstances2 = pickle.load(f)
-
-testInstancesFilename = "../../Data/BlogsAllObf/X_test_WP_300.pickle"
+testInstancesFilename = "Data/X_test/X_test_WP_300.pickle"
 with open(testInstancesFilename, 'rb') as f:
         testInstances3 = pickle.load(f)
 
@@ -87,17 +83,14 @@ for documentNumber in range(len(testInstance_total)):
         filePath, filename, authorId, author, inputText = testInstance_total[documentNumber]
         print("Document Name : ", filename)
         print("Document Number : ", documentNumber)
-        #if(authorId != 14):
-            #continue
 
         clf = Classifier(classifierType, authorstoKeep, datasetName, filename)
         clf.loadClassifier()
+
 	#filePath = '/home/rzhai/Desktop/M100_Obfuscated/'+documentName + '/100/'
         #filePath = '/home/rzhai/Desktop/SN-PAN16_Obfuscated/' + documentName + '/'
         ## For Original Documents
 	#filePath = '/home/rzhai/MutantX/MutantX/Data/datasetPickles/amt-10/X_test/'
-	## For SN-PAN16
-	#fileName = documentName + '.txt'
 	
 	## For DS-PAN17 && MutantX
         '''
@@ -106,8 +99,6 @@ for documentNumber in range(len(testInstance_total)):
 	filename = documentName
 	authorId, author, inputText = getInformationOfInputDocument(filePath)
         '''
-        if (filename=='SN84-1593902.txt'):
-            continue
         total_document.append(filename)
 
         originalDocument = Document(inputText)
@@ -117,28 +108,6 @@ for documentNumber in range(len(testInstance_total)):
         total_original.append(originalDocument.documentAuthor)
         print("Original author:", authorId)
         total_predicted.append(authorId)
-        
-        excess_list = ['9-3403444.txt','9-1593902.txt','DS84-1474573','DS9-1593902']
-        token_exceed = False
-        #from nltk import sent_tokenize
-        #sentenceText = sent_tokenize(inputText)
-        #total_score = 0
-        #print(sentenceText)
-        #for sentence in sentenceText:
-        #    cur_score = score(sentence)
-        #    if (cur_score):
-        #        print(sentence)
-        #        print(cur_score)
-        #        print("-------------------------")
-        #        total_score += cur_score
-        #    else:
-        #        token_exceed = True
-        #        break
-        #if (not token_exceed):
-        #    total_complexity.append(total_score/len(sentenceText))
-        #    print("Average score:", total_score/len(sentenceText))
-        #else:
-        #    total_complexity.append("EXCEED")
 
         if originalDocument.documentAuthor != authorId:        
                 incorrectCount += 1

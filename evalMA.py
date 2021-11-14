@@ -38,7 +38,7 @@ def getInformationOfInputDocument(documentPath):
 
     return (authorLabel, authorName, inputText)
 
-testInstancesFilename = "../../Data/BlogsAllObf/X_test_WP_300.pickle"
+testInstancesFilename = "Data/X_test/X_test_WP_300.pickle"
 with open(testInstancesFilename, 'rb') as f:
         testInstances = pickle.load(f)
 
