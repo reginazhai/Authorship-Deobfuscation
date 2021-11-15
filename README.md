@@ -3,7 +3,7 @@ This repository contains code and data used in anonymous ACL submission 2022.
 
 ## Requirements
 1. Install Python3
-2. Download trained models and data for training and testing in the main folder.
+2. Download trained models and data for training and testing in the main folder. (https://www.dropbox.com/sh/iyuviaafxx94yda/AAAG4nBL0p6B5f36qsp-1kCQa?dl=0)
 3. Install libraries needed for the project through
 ```
   pip3 install -r requirements.txt
