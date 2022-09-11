@@ -1,5 +1,5 @@
 # Authorship-Deobfuscation
-This repository contains code and data used in anonymous ACL submission 2022.
+This repository contains code and data used in the paper "[A Girl Has A Name, And It’s ... Adversarial Authorship Attribution for Deobfuscation][paper-link]" accepted at ACL 2022.
 
 ## Requirements
 1. Install Python3
@@ -22,3 +22,6 @@ To evaluate the METEOR score from previous data, run the following in the main f
 ```
   python3 CalcMeteor.py
 ```
+
+
+[paper-link]:https://aclanthology.org/2022.acl-long.509/ 
