@@ -3,7 +3,7 @@ This repository contains code and data used in the paper "[A Girl Has A Name, An
 
 ## Requirements
 1. Install Python3
-2. Download trained models and data for training and testing in the main folder. (https://www.dropbox.com/sh/iyuviaafxx94yda/AAAG4nBL0p6B5f36qsp-1kCQa?dl=0)
+2. Download trained models and data for training and testing in the [main folder][data-link]. 
 3. Install libraries needed for the project through
 ```
   pip3 install -r requirements.txt
@@ -25,3 +25,4 @@ To evaluate the METEOR score from previous data, run the following in the main f
 
 
 [paper-link]:https://aclanthology.org/2022.acl-long.509/ 
+[data-link]:https://www.dropbox.com/sh/iyuviaafxx94yda/AAAG4nBL0p6B5f36qsp-1kCQa?dl=0
